@@ -11,7 +11,7 @@ public class CalculatorTest
     void shouldAddTwoNumbers(){
         assertEquals(4, calc.add(2,2));
         assertEquals(5, calc.add(2,3));
-        assertEquals(180, calc.add(9,9));
+        assertEquals(18, calc.add(9,9));
     }
     @Test
     void shouldReturnGradeLetters(){
