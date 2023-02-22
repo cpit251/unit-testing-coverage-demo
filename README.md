@@ -2,7 +2,7 @@
 Example app on unit testing, code coverage, and continuous integration (CI) pipeline.
 
 [![cpit251](https://circleci.com/gh/cpit251/unit-testing-coverage-demo.svg?style=svg)](https://app.circleci.com/pipelines/github/cpit251/unit-testing-coverage-demo)
-
+[![codecov](https://codecov.io/gh/cpit251/unit-testing-coverage-demo/branch/main/graph/badge.svg?token=I50I256DZB)](https://codecov.io/gh/cpit251/unit-testing-coverage-demo)
 
 ### Usage
 Below are the maven commands that you need to know in order to build, test, and package a java maven project.
