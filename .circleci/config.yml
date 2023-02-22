@@ -2,7 +2,7 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 orbs:
-  coveralls: coveralls/coveralls@1.0.6
+  codecov: codecov/codecov@3.2.4
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
@@ -24,15 +24,16 @@ jobs:
       - run:
           name: Build
           command: mvn -B -DskipTests clean package
-      # Then run your tests!
+      # Then run your tests and coverage!
       - run:
-          name: Test
-          command: mvn test
+          name: Test and Coverage
+          command: mvn -B test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  upload-to-codecov:
     jobs:
-      - build-and-test
+      - checkout
+      - codecov/upload
+
