@@ -3,7 +3,7 @@ orbs:
   codecov: codecov/codecov@3
 
 jobs:
-  build-and-test:
+  build:
     docker:
       - image: cimg/openjdk:18.0
     steps:
@@ -24,5 +24,5 @@ workflow:
   version: 2.1
   build-test:
     jobs:
-      - build-and-test
+      - build
 
